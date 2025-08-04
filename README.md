@@ -3,6 +3,7 @@
 This project provides an R-based processing pipeline to analyze nitrous oxide (N₂O) emissions from global riverine systems using raster datasets. It leverages data from the [CMS: Global Riverine N₂O Emissions, 1900–2016](https://daac.ornl.gov/CMS/guides/Global_Riverine_N2O_Emissions.html) dataset.
 
 ---
+🚫 Please do not fork or open issues on this repo. It is under development.
 
 ## 📁 Project Structure
 
@@ -18,7 +19,11 @@ This project provides an R-based processing pipeline to analyze nitrous oxide (N
 │   └─ Configuration file to define parameters (years, thresholds, paths, OS).
 │
 ├── Slider_Year_Range_Filter.R
-│   └─ Interactive year-range selector used in the main script.
+│   └─ Launches a GUI to select a custom year range using a helper slider adapted from aplpack. Calls `slider2.R`.
+│
+├── slider2.R
+│   └─ Adaptation of `aplpack::slider` for interactive year range selection.  
+│      Based on original functions by Hans Peter Wolf: https://cran.r-project.org/web/packages/aplpack/vignettes/sliderfns.pdf
 │
 └── /output/
     └─ Raster outputs (GeoTIFF, PNG) and cumulative summaries
@@ -39,7 +44,7 @@ To summarize and compare annual riverine N₂O emissions (positive and negative 
    Detects OS, working directory, and reads user-defined parameters from `.cfg`.
 
 2. **Year Selection**  
-   Uses `Slider_Year_Range_Filter.R` to select a year range from 1900 to 2016.
+   Uses `Slider_Year_Range_Filter.R` to select a year range from 1900 to 2016 via an interactive GUI slider (adapted from `aplpack::slider`).
 
 3. **Raster Processing per Type**  
    For each combination of stream order and emission category:
@@ -52,6 +57,9 @@ To summarize and compare annual riverine N₂O emissions (positive and negative 
 
 5. **Final Output**  
    Saves results as GeoTIFFs and PNGs (individual and comparison plots) to `output/FINAL/`.
+
+> ℹ️ Note: The slider interface (`slider2.R`) is adapted from original work by Hans Peter Wolf.  
+> See: [Slider Functions for Data Selection – aplpack vignette (CRAN)](https://cran.r-project.org/web/packages/aplpack/vignettes/sliderfns.pdf)
 
 ---
 
