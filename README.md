@@ -27,19 +27,19 @@ This project provides an R-based processing pipeline to analyze nitrous oxide (N
 
 ### 🧭 Processing Workflow
 
-![Slide 1 - Workflow](figures/slide_02.png)
+![Slide 1 - Workflow](figures/slide-02.png)
 
 ### 📈 Raster summation methods
 
-![Slide 2 - Emissions Comparison](figures/slide_03.png)
+![Slide 2 - Emissions Comparison](figures/slide-03.png)
 
 ### 📈 Visual comparison both methods
 
-![Slide 3 - Emissions Comparison](figures/slide_09.png)
+![Slide 3 - Emissions Comparison](figures/slide-09.png)
 
 ### 📈 Visual summation 2 categoris emissions method 1
 
-![Slide 4 - Emissions Comparison](figures/slide_11.png)
+![Slide 4 - Emissions Comparison](figures/slide-11.png)
 
 ### ![📂 See all slides →](figures/)
 
